@@ -1,191 +1,169 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>刘航闻 Hangwen Liu - Resume</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
-        body { font-family: 'Roboto', 'Noto Sans SC', sans-serif; background-color: #f3f4f6; color: #1f2937; }
-        .resume-container { max-width: 900px; margin: 2rem auto; background: white; padding: 3rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-radius: 4px; }
-        .section-header { border-bottom: 2px solid #1d4ed8; margin-top: 1.5rem; margin-bottom: 0.75rem; padding-bottom: 0.25rem; color: #1e40af; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05em; }
-        .content-item { margin-bottom: 1rem; }
-        .date-text { color: #6b7280; font-size: 0.875rem; white-space: nowrap; }
-        .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 100; }
-        .en-content { display: none; }
-        p, li { line-height: 1.6; font-size: 0.95rem; }
-        .grid-info div { border-right: 1px solid #e5e7eb; padding: 0 10px; }
-        .grid-info div:last-child { border-right: none; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刘航闻 | Hangwen Liu</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+body {
+    background: #e5e7eb;
+    font-family: -apple-system, BlinkMacSystemFont;
+}
+
+.resume {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.section-title {
+    border-bottom: 2px solid #1e3a8a;
+    color: #1e3a8a;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.lang-en { display: none; }
+
+.btn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: #1e3a8a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+</style>
 </head>
+
 <body>
 
-    <div class="lang-switch">
-        <button onclick="toggleLang()" class="bg-blue-800 text-white px-5 py-2 rounded-full shadow-lg hover:bg-blue-700 transition">
-            <i class="fas fa-language mr-2"></i><span id="btnText">English Version</span>
-        </button>
-    </div>
+<div class="btn" onclick="toggleLang()" id="btn">Switch to English</div>
 
-    <div class="resume-container">
-        <header class="text-center mb-8">
-            <h1 class="text-3xl font-bold mb-3">
-                <span class="zh-content">刘航闻</span>
-                <span class="en-content">Hangwen Liu</span>
-            </h1>
-            <div class="flex justify-center flex-wrap gap-4 text-sm grid-info">
-                <div><i class="fas fa-envelope mr-1"></i> 1171930010@qq.com</div>
-                <div><i class="fas fa-phone mr-1"></i> (+86)188-0407-0265</div>
-                <div>
-                    <span class="zh-content">21 岁 | 男 | 满族 | 中共党员</span>
-                    <span class="en-content">21 Years Old | Male | Manchu | CPC Member</span>
-                </div>
-            </div>
-        </header>
+<div class="resume">
 
-        <section>
-            <div class="section-header">
-                <span class="zh-content">教育背景</span>
-                <span class="en-content">Education Background</span>
-            </div>
-            <div class="flex justify-between items-start mb-2">
-                <div class="font-bold">
-                    <span class="zh-content">辽宁大学（211、双一流建设高校） 经济学院</span>
-                    <span class="en-content">Liaoning University (211 Project) School of Economics</span>
-                </div>
-                <div class="date-text">2022.09 - Present</div>
-            </div>
-            <p class="italic text-blue-700 text-sm mb-2">
-                <span class="zh-content">经济学（国家基础学科拔尖学生培养计划2.0基地）</span>
-                <span class="en-content">Economics (National Top-notch Undergraduate Foundation Program 2.0)</span>
-            </p>
-            <ul class="list-disc ml-5 text-sm space-y-1">
-                <li>
-                    <span class="zh-content">平均学分绩点：3.88/4.00 | 专业成绩排名：2/74</span>
-                    <span class="en-content">GPA: 3.88/4.00 | Ranking: 2/74</span>
-                </li>
-                <li>
-                    <span class="zh-content">核心课程：宏观经济学(99)、计量经济学(94)、金融学(97)、外国经济思想史(98)、概率论与数理统计(99)</span>
-                    <span class="en-content">Core Courses: Macroeconomics (99), Econometrics (94), Finance (97), History of Foreign Economic Thought (98), Probability & Statistics (99)</span>
-                </li>
-                <li>
-                    <span class="zh-content">英语水平：CET-4：539 | CET-6：453 | 雅思：6.0</span>
-                    <span class="en-content">English: CET-4: 539 | CET-6: 453 | IELTS: 6.0</span>
-                </li>
-            </ul>
-        </section>
+<!-- HEADER -->
+<div class="flex justify-between items-end border-b pb-4">
+<div>
+<h1 class="text-3xl font-bold">
+<span class="lang-zh">刘航闻</span>
+<span class="lang-en">Hangwen Liu</span>
+</h1>
+<p class="text-blue-800 mt-1">
+<span class="lang-zh">中共党员 | 21岁 | 男 | 满族</span>
+<span class="lang-en">CPC Member | 21 | Male | Manchu</span>
+</p>
+</div>
 
-        <section>
-            <div class="section-header">
-                <span class="zh-content">荣誉奖励</span>
-                <span class="en-content">Honors & Awards</span>
-            </div>
-            <div class="text-sm space-y-1">
-                <p><strong>2023-2024:</strong> 国家奖学金、白钦先奖学金、四次校级一等奖学金、一次二等奖学金</p>
-                <p><span class="zh-content">辽宁大学优秀学生、优秀团员；第十届CFCC智慧经济创新创业竞赛国家特等奖</span><span class="en-content">Outstanding Student & League Member; 10th CFCC Smart Economy Innovation Comp. Grand Prize (National)</span></p>
-                <p><span class="zh-content">第十四届“挑战杯”大学生创业计划竞赛省级金奖；第十四届三创赛省级一等奖；全国大学生统计建模大赛省级银奖等</span><span class="en-content">14th "Challenge Cup" Provincial Gold; 14th E-commerce "Innovation, Creativity & Entrepreneurship" Provincial 1st; National Statistics Modeling Provincial Silver</span></p>
-            </div>
-        </section>
+<div class="text-sm text-right">
+<p>📧 1171930010@qq.com</p>
+<p>📞 (+86)18804070265</p>
+</div>
+</div>
 
-        <section>
-            <div class="section-header">
-                <span class="zh-content">科研成果</span>
-                <span class="en-content">Research Achievements</span>
-            </div>
-            <div class="content-item">
-                <div class="flex justify-between font-bold text-sm">
-                    <span><span class="zh-content">期刊论文《ESG 评级与企业绿色技术创新》</span><span class="en-content">Paper: ESG Ratings and Corporate Green Innovation</span></span>
-                    <span class="date-text">2024.02-2024.09</span>
-                </div>
-                <p class="text-xs text-blue-600 mb-1 italic">
-                    <span class="zh-content">发表于：北大核心/CSSCI扩展版期刊《工业技术经济》, 2024, 43(12)</span>
-                    <span class="en-content">Published: "Industrial Technological Economics" (CSSCI/PKU Core)</span>
-                </p>
-                <p class="text-sm text-gray-600">
-                    <span class="zh-content">运用多期DID模型研究发现：ESG评级通过缓解融资约束、增加研发投入、减少管理者短视三条机制显著提升绿色创新。被引6次，下载量3500+。</span>
-                    <span class="en-content">Using multi-period DID model: ESG ratings significantly enhance green innovation via easing financing constraints and increasing R&D. Cited 6 times, 3500+ downloads.</span>
-                </p>
-            </div>
-            <div class="content-item">
-                <div class="flex justify-between font-bold text-sm">
-                    <span><span class="zh-content">工作论文《ESG 评级的稳股市效应——双重视角》</span><span class="en-content">Working Paper: Stock Market Stabilization of ESG Ratings</span></span>
-                    <span class="date-text">2025.01-2025.04</span>
-                </div>
-                <p class="text-sm text-gray-600">
-                    <span class="zh-content">基于A股数据，实证检验ESG评级通过耐心资本与财务柔性稳定股价的作用。入选“第三十三届中华外国经济学说研究会”，CSSCI外审中。</span>
-                    <span class="en-content">Examined stabilization via patient capital and financial flexibility. Selected for 33rd National Conference; under review at CSSCI.</span>
-                </p>
-            </div>
-            <div class="content-item">
-                <div class="flex justify-between font-bold text-sm">
-                    <span><span class="zh-content">工作论文《谁为气候风险买单？——劳动收入份额视角》</span><span class="en-content">Working Paper: Who Pays for Climate Risk? Labor Income Share</span></span>
-                    <span class="date-text">2025.05-2025.08</span>
-                </div>
-                <p class="text-sm text-gray-600">
-                    <span class="zh-content">研究发现气候风险显著降低企业劳动收入份额。入选“企业高质量发展与中国式现代化论坛”，CSSCI外审中。</span>
-                    <span class="en-content">Analyzed climate risk's impact on labor income share. Selected for "High-quality Development Forum"; under review at CSSCI.</span>
-                </p>
-            </div>
-        </section>
+<!-- EDUCATION -->
+<div class="section-title">教育背景 / EDUCATION</div>
 
-        <section>
-            <div class="section-header">
-                <span class="zh-content">竞赛与项目经历</span>
-                <span class="en-content">Competitions & Projects</span>
-            </div>
-            <div class="content-item">
-                <div class="flex justify-between font-bold text-sm">
-                    <span><span class="zh-content">“溪草茶饮”——药食同源赋能本溪中草药产业振兴</span><span class="en-content">"Xicao Tea" - Revitalizing Benxi Herbal Industry</span></span>
-                    <span class="date-text">2024.02-2025.03</span>
-                </div>
-                <p class="text-sm text-gray-600">
-                    <span class="zh-content">将当地资源与市场需求结合，推动乡村经济。获“挑战杯”省金奖、三创赛省一等奖、CFCC国家特等奖。</span>
-                    <span class="en-content">Promoted rural economy by branding local herbs. Won Challenge Cup Gold and CFCC National Grand Prize.</span>
-                </p>
-            </div>
-        </section>
+<p>
+<b class="lang-zh">辽宁大学（211 / 双一流） 经济学（拔尖计划）</b>
+<b class="lang-en">Liaoning University (Double First-Class) – Economics (Elite Program)</b>
+</p>
 
-        <section>
-            <div class="section-header">
-                <span class="zh-content">会议交流与社会实践</span>
-                <span class="en-content">Conferences & Practice</span>
-            </div>
-            <ul class="list-disc ml-5 text-sm space-y-1">
-                <li>
-                    <span class="zh-content">联合国教科文组织地球宪章首届“青年领导力”国际培训 (2023.02-2023.04)</span>
-                    <span class="en-content">UNESCO Earth Charter 1st "Youth Leadership" Training (2023.02-2023.04)</span>
-                </li>
-                <li>
-                    <span class="zh-content">第三十三届中华外国经济学说研究会、2025企业高质量发展论坛（分论坛发言）</span>
-                    <span class="en-content">33rd National Conference of Foreign Economic Thought; 2025 High-quality Development Forum (Speaker)</span>
-                </li>
-                <li>
-                    <span class="zh-content">辽宁大学经济学院学生会执行主席 (2024.12 至今)</span>
-                    <span class="en-content">Executive President, Student Union, School of Economics, LNU (2024.12 - Present)</span>
-                </li>
-            </ul>
-        </section>
-    </div>
+<p class="text-sm text-gray-600">2022.09 - 至今</p>
 
-    <script>
-        function toggleLang() {
-            const zh = document.querySelectorAll('.zh-content');
-            const en = document.querySelectorAll('.en-content');
-            const btn = document.getElementById('btnText');
-            if (en[0].style.display === 'inline-block' || en[0].style.display === 'block') {
-                zh.forEach(el => el.style.display = 'inline-block');
-                en.forEach(el => el.style.display = 'none');
-                btn.innerText = "English Version";
-            } else {
-                zh.forEach(el => el.style.display = 'none');
-                en.forEach(el => {
-                    if(el.tagName === 'SPAN') el.style.display = 'inline-block';
-                    else el.style.display = 'block';
-                });
-                btn.innerText = "切换至中文";
-            }
-        }
-    </script>
+<p>
+<span class="lang-zh">GPA：3.88/4.00（专业第2/74）</span>
+<span class="lang-en">GPA: 3.88/4.0 (Rank 2/74)</span>
+</p>
+
+<!-- RESEARCH -->
+<div class="section-title">科研成果 / RESEARCH</div>
+
+<p><b>ESG评级与企业绿色技术创新</b></p>
+
+<p class="text-sm">
+<span class="lang-zh">
+基于2012–2022年A股上市公司数据，采用多期DID模型，
+实证发现ESG评级显著促进企业绿色技术创新。
+机制检验表明，该效应通过缓解融资约束、
+提升研发投入以及抑制管理者短视行为实现。
+论文发表于北大核心期刊，被引6次，下载量3500+。
+</span>
+
+<span class="lang-en">
+Using A-share firms (2012–2022), this study employs a multi-period DID model
+to show that ESG ratings significantly promote green innovation.
+Mechanism analysis indicates effects through easing financing constraints,
+increasing R&D investment, and reducing managerial myopia.
+Published in a core journal with 6 citations and 3500+ downloads.
+</span>
+</p>
+
+<p><b>ESG评级的稳股市效应</b></p>
+
+<p class="text-sm">
+<span class="lang-zh">
+从耐心资本与财务柔性视角，分析ESG评级对股价稳定性的影响，
+相关成果入选全国学术会议并进入期刊外审阶段。
+</span>
+<span class="lang-en">
+Analyzes how ESG ratings stabilize stock prices via patient capital
+and financial flexibility. Selected for national academic conference
+and under journal review.
+</span>
+</p>
+
+<!-- COMPETITION -->
+<div class="section-title">竞赛与项目 / PROJECTS</div>
+
+<p><b>溪草茶饮项目（国家特等奖）</b></p>
+
+<p class="text-sm">
+<span class="lang-zh">
+围绕中草药产业转型，通过品牌化与商业化路径推动产业升级，
+获得挑战杯省一等奖与CFCC国家特等奖。
+</span>
+<span class="lang-en">
+A project promoting herbal industry upgrading through branding and commercialization,
+winning provincial and national top awards.
+</span>
+</p>
+
+<!-- SKILLS -->
+<div class="section-title">技能 / SKILLS</div>
+
+<p>
+Stata / Python / Econometrics / Data Analysis
+</p>
+
+</div>
+
+<script>
+let isCN = true;
+
+function toggleLang(){
+    isCN = !isCN;
+
+    document.querySelectorAll('.lang-zh').forEach(el=>{
+        el.style.display = isCN ? 'inline' : 'none';
+    });
+
+    document.querySelectorAll('.lang-en').forEach(el=>{
+        el.style.display = isCN ? 'none' : 'inline';
+    });
+
+    document.getElementById('btn').innerText = isCN ? "Switch to English" : "切换至中文";
+}
+</script>
+
 </body>
 </html>
