@@ -5,41 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>刘航闻 | Hangwen Liu</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 <style>
 body {
-    font-family: "Inter", "PingFang SC", sans-serif;
-    background:#f3f4f6;
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+    margin:0;
 }
 
-.resume {
-    max-width: 900px;
-    margin: 30px auto;
+.container{
+    max-width:900px;
+    margin:30px auto;
     background:white;
     padding:40px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
 }
 
-.section-title{
-    border-bottom:2px solid #1e3a8a;
+h1{
+    margin-bottom:5px;
+}
+
+.section{
     margin-top:25px;
+}
+
+.title{
+    border-bottom:2px solid #003366;
+    font-weight:bold;
+    padding-bottom:5px;
     margin-bottom:10px;
-    font-weight:700;
-    color:#1e3a8a;
+    color:#003366;
 }
 
 .lang-en{display:none;}
 
-.switch-btn{
+.btn{
     position:fixed;
-    right:30px;
-    bottom:30px;
-    background:#1e3a8a;
+    right:20px;
+    bottom:20px;
+    background:#003366;
     color:white;
-    padding:12px 20px;
-    border-radius:30px;
+    padding:10px 20px;
+    border-radius:20px;
     cursor:pointer;
 }
 </style>
@@ -47,102 +53,95 @@ body {
 
 <body>
 
-<div class="switch-btn" onclick="toggleLang()">切换语言</div>
+<div class="btn" onclick="toggleLang()">中 / EN</div>
 
-<div class="resume">
+<div class="container">
 
-<!-- 基本信息 -->
-<h1 class="text-3xl font-bold">
+<h1>
 <span class="lang-zh">刘航闻</span>
 <span class="lang-en">Hangwen Liu</span>
 </h1>
 
-<p class="text-gray-600 mt-2">
+<p>
 <span class="lang-zh">中共党员｜男｜21岁｜满族</span>
 <span class="lang-en">CPC Member | Male | 21 | Manchu</span>
 </p>
 
-<p class="text-sm mt-1">
-📧 1171930010@qq.com ｜ 📱 18804070265
-</p>
+<p>📧 1171930010@qq.com ｜ 📱 18804070265</p>
 
 <!-- 教育 -->
-<div class="section-title">教育背景 / EDUCATION</div>
+<div class="section">
+<div class="title">教育背景 / EDUCATION</div>
 
-<p><strong>辽宁大学 经济学院</strong>（211 / 双一流）</p>
+<p><b>辽宁大学 经济学院（211 / 双一流）</b></p>
 <p>2022.09 - 至今</p>
 
-<p class="text-blue-700">
-<span class="lang-zh">经济学（国家基础学科拔尖计划2.0）</span>
+<p>
+<span class="lang-zh">经济学（国家基础学科拔尖学生培养计划2.0）</span>
 <span class="lang-en">Economics (Top-notch Talent Program 2.0)</span>
 </p>
 
 <p>GPA：3.88 / 4.00 ｜ 排名：2 / 74</p>
 
-<p class="mt-2 text-sm">
-核心课程：
+<p>
 宏观经济学(99)｜计量经济学(94)｜金融学(97)｜概率论(99)
 </p>
 
-<p class="text-sm">
-英语：CET-4 539 ｜ CET-6 453 ｜ IELTS 6.0
-</p>
+<p>英语：CET-4 539 ｜ CET-6 453 ｜ IELTS 6.0</p>
+</div>
 
 <!-- 荣誉 -->
-<div class="section-title">荣誉奖励 / AWARDS</div>
+<div class="section">
+<div class="title">荣誉奖励 / AWARDS</div>
 
-<ul class="list-disc ml-5 text-sm">
+<ul>
 <li>国家奖学金、白钦先奖学金</li>
 <li>四次校级一等奖学金、一次二等奖学金</li>
-<li>CFCC国家特等奖</li>
+<li>辽宁大学优秀学生、优秀团员</li>
+<li>CFCC智慧经济创新创业竞赛国家特等奖</li>
 <li>挑战杯省级金奖</li>
-<li>三创赛省一等奖</li>
-<li>统计建模省级银奖</li>
+<li>三创赛省级一等奖</li>
+<li>统计建模大赛省级银奖</li>
 </ul>
+</div>
 
 <!-- 科研 -->
-<div class="section-title">科研成果 / RESEARCH</div>
+<div class="section">
+<div class="title">科研成果 / RESEARCH</div>
 
-<p><strong>ESG评级与企业绿色技术创新</strong></p>
-<p class="text-sm text-gray-600">
-发表于《工业技术经济》（CSSCI扩展），被引6次，下载3500+
-</p>
-
-<p class="text-sm">
-方法：多期DID模型  
-结论：ESG通过融资约束、研发投入、管理者短视影响绿色创新
-</p>
+<p><b>《ESG评级与企业绿色技术创新》</b></p>
+<p>发表于《工业技术经济》（CSSCI扩展），被引6次，下载3500+</p>
+<p>使用多期DID模型，发现ESG显著促进企业绿色创新</p>
 
 <br>
 
-<p><strong>ESG评级的稳股市效应</strong></p>
-<p class="text-sm text-gray-600">
-已进入CSSCI外审，入选全国会议
-</p>
+<p><b>《ESG评级的稳股市效应》</b></p>
+<p>入选全国会议，CSSCI外审中</p>
 
 <br>
 
-<p><strong>谁为气候风险买单</strong></p>
-<p class="text-sm text-gray-600">
-已进入CSSCI外审
-</p>
+<p><b>《谁为气候风险买单》</b></p>
+<p>入选论坛，CSSCI外审中</p>
+</div>
 
 <!-- 竞赛 -->
-<div class="section-title">竞赛经历 / COMPETITION</div>
+<div class="section">
+<div class="title">竞赛经历 / COMPETITION</div>
 
-<p><strong>“溪草茶饮”项目</strong></p>
-<p class="text-sm">
-推动中草药产业转型，获挑战杯、省一等奖、CFCC国家特等奖
-</p>
+<p><b>“溪草茶饮”创新项目</b></p>
+<p>推动本溪中草药产业发展，获挑战杯、省一等奖、CFCC国家特等奖</p>
+</div>
 
 <!-- 校园 -->
-<div class="section-title">校园经历 / EXPERIENCE</div>
+<div class="section">
+<div class="title">校园经历 / EXPERIENCE</div>
 
-<ul class="text-sm">
-<li>经济学院学生会执行主席（2024-）</li>
+<ul>
+<li>经济学院学生会执行主席（2024-至今）</li>
 <li>联合国教科文组织青年领导力项目</li>
 <li>本溪中草药产业调研负责人</li>
 </ul>
+</div>
 
 </div>
 
@@ -152,11 +151,11 @@ function toggleLang(){
     let en=document.querySelectorAll(".lang-en");
 
     zh.forEach(el=>{
-        el.style.display = el.style.display==="none"?"inline":"none";
+        el.style.display = (el.style.display==="none")?"inline":"none";
     });
 
     en.forEach(el=>{
-        el.style.display = el.style.display==="inline"?"none":"inline";
+        el.style.display = (el.style.display==="inline")?"none":"inline";
     });
 }
 </script>
