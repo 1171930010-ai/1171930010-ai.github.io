@@ -10,158 +10,154 @@
 
 <style>
 body {
-    background: #e5e7eb;
-    font-family: -apple-system, BlinkMacSystemFont;
+    font-family: "Inter", "PingFang SC", sans-serif;
+    background:#f3f4f6;
 }
 
 .resume {
     max-width: 900px;
     margin: 30px auto;
-    background: white;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    background:white;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
-.section-title {
-    border-bottom: 2px solid #1e3a8a;
-    color: #1e3a8a;
-    font-weight: bold;
-    margin-top: 25px;
-    margin-bottom: 10px;
+.section-title{
+    border-bottom:2px solid #1e3a8a;
+    margin-top:25px;
+    margin-bottom:10px;
+    font-weight:700;
+    color:#1e3a8a;
 }
 
-.lang-en { display: none; }
+.lang-en{display:none;}
 
-.btn {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    background: #1e3a8a;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 30px;
-    cursor: pointer;
+.switch-btn{
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    background:#1e3a8a;
+    color:white;
+    padding:12px 20px;
+    border-radius:30px;
+    cursor:pointer;
 }
 </style>
 </head>
 
 <body>
 
-<div class="btn" onclick="toggleLang()" id="btn">Switch to English</div>
+<div class="switch-btn" onclick="toggleLang()">切换语言</div>
 
 <div class="resume">
 
-<!-- HEADER -->
-<div class="flex justify-between items-end border-b pb-4">
-<div>
+<!-- 基本信息 -->
 <h1 class="text-3xl font-bold">
 <span class="lang-zh">刘航闻</span>
 <span class="lang-en">Hangwen Liu</span>
 </h1>
-<p class="text-blue-800 mt-1">
-<span class="lang-zh">中共党员 | 21岁 | 男 | 满族</span>
-<span class="lang-en">CPC | 21 | Male | Manchu</span>
+
+<p class="text-gray-600 mt-2">
+<span class="lang-zh">中共党员｜男｜21岁｜满族</span>
+<span class="lang-en">CPC Member | Male | 21 | Manchu</span>
 </p>
-</div>
 
-<div class="text-sm text-right">
-<p>📧 1171930010@qq.com</p>
-<p>📞 (+86)18804070265</p>
-</div>
-</div>
+<p class="text-sm mt-1">
+📧 1171930010@qq.com ｜ 📱 18804070265
+</p>
 
-<!-- EDUCATION -->
+<!-- 教育 -->
 <div class="section-title">教育背景 / EDUCATION</div>
 
-<p>
-<b class="lang-zh">辽宁大学（211 / 双一流） 经济学（拔尖计划）</b>
-<b class="lang-en">Liaoning University (Double First-Class) – Economics (Elite Program)</b>
+<p><strong>辽宁大学 经济学院</strong>（211 / 双一流）</p>
+<p>2022.09 - 至今</p>
+
+<p class="text-blue-700">
+<span class="lang-zh">经济学（国家基础学科拔尖计划2.0）</span>
+<span class="lang-en">Economics (Top-notch Talent Program 2.0)</span>
 </p>
 
-<p class="text-sm text-gray-600">2022.09 - 至今</p>
+<p>GPA：3.88 / 4.00 ｜ 排名：2 / 74</p>
 
-<p>
-<span class="lang-zh">GPA：3.88/4.00（专业第2/74）</span>
-<span class="lang-en">GPA: 3.88/4.0 (Rank 2/74)</span>
+<p class="mt-2 text-sm">
+核心课程：
+宏观经济学(99)｜计量经济学(94)｜金融学(97)｜概率论(99)
 </p>
 
-<!-- RESEARCH -->
+<p class="text-sm">
+英语：CET-4 539 ｜ CET-6 453 ｜ IELTS 6.0
+</p>
+
+<!-- 荣誉 -->
+<div class="section-title">荣誉奖励 / AWARDS</div>
+
+<ul class="list-disc ml-5 text-sm">
+<li>国家奖学金、白钦先奖学金</li>
+<li>四次校级一等奖学金、一次二等奖学金</li>
+<li>CFCC国家特等奖</li>
+<li>挑战杯省级金奖</li>
+<li>三创赛省一等奖</li>
+<li>统计建模省级银奖</li>
+</ul>
+
+<!-- 科研 -->
 <div class="section-title">科研成果 / RESEARCH</div>
 
-<p><b>ESG评级与企业绿色技术创新</b></p>
+<p><strong>ESG评级与企业绿色技术创新</strong></p>
+<p class="text-sm text-gray-600">
+发表于《工业技术经济》（CSSCI扩展），被引6次，下载3500+
+</p>
 
 <p class="text-sm">
-<span class="lang-zh">
-基于2012–2022年A股上市公司数据，采用多期DID模型，
-实证发现ESG评级显著促进企业绿色技术创新。
-机制检验表明，该效应通过缓解融资约束、
-提升研发投入以及抑制管理者短视行为实现。
-论文发表于北大核心期刊，被引6次，下载量3500+。
-</span>
-
-<span class="lang-en">
-Using A-share firms (2012–2022), this study employs a multi-period DID model
-to show that ESG ratings significantly promote green innovation.
-Mechanism analysis indicates effects through easing financing constraints,
-increasing R&D investment, and reducing managerial myopia.
-Published in a core journal with 6 citations and 3500+ downloads.
-</span>
+方法：多期DID模型  
+结论：ESG通过融资约束、研发投入、管理者短视影响绿色创新
 </p>
 
-<p><b>ESG评级的稳股市效应</b></p>
+<br>
 
+<p><strong>ESG评级的稳股市效应</strong></p>
+<p class="text-sm text-gray-600">
+已进入CSSCI外审，入选全国会议
+</p>
+
+<br>
+
+<p><strong>谁为气候风险买单</strong></p>
+<p class="text-sm text-gray-600">
+已进入CSSCI外审
+</p>
+
+<!-- 竞赛 -->
+<div class="section-title">竞赛经历 / COMPETITION</div>
+
+<p><strong>“溪草茶饮”项目</strong></p>
 <p class="text-sm">
-<span class="lang-zh">
-从耐心资本与财务柔性视角，分析ESG评级对股价稳定性的影响，
-相关成果入选全国学术会议并进入期刊外审阶段。
-</span>
-<span class="lang-en">
-Analyzes how ESG ratings stabilize stock prices via patient capital
-and financial flexibility. Selected for national academic conference
-and under journal review.
-</span>
+推动中草药产业转型，获挑战杯、省一等奖、CFCC国家特等奖
 </p>
 
-<!-- COMPETITION -->
-<div class="section-title">竞赛与项目 / PROJECTS</div>
+<!-- 校园 -->
+<div class="section-title">校园经历 / EXPERIENCE</div>
 
-<p><b>溪草茶饮项目（国家特等奖）</b></p>
-
-<p class="text-sm">
-<span class="lang-zh">
-围绕中草药产业转型，通过品牌化与商业化路径推动产业升级，
-获得挑战杯省一等奖与CFCC国家特等奖。
-</span>
-<span class="lang-en">
-A project promoting herbal industry upgrading through branding and commercialization,
-winning provincial and national top awards.
-</span>
-</p>
-
-<!-- SKILLS -->
-<div class="section-title">技能 / SKILLS</div>
-
-<p>
-Stata / Python / Econometrics / Data Analysis
-</p>
+<ul class="text-sm">
+<li>经济学院学生会执行主席（2024-）</li>
+<li>联合国教科文组织青年领导力项目</li>
+<li>本溪中草药产业调研负责人</li>
+</ul>
 
 </div>
 
 <script>
-let isCN = true;
-
 function toggleLang(){
-    isCN = !isCN;
+    let zh=document.querySelectorAll(".lang-zh");
+    let en=document.querySelectorAll(".lang-en");
 
-    document.querySelectorAll('.lang-zh').forEach(el=>{
-        el.style.display = isCN ? 'inline' : 'none';
+    zh.forEach(el=>{
+        el.style.display = el.style.display==="none"?"inline":"none";
     });
 
-    document.querySelectorAll('.lang-en').forEach(el=>{
-        el.style.display = isCN ? 'none' : 'inline';
+    en.forEach(el=>{
+        el.style.display = el.style.display==="inline"?"none":"inline";
     });
-
-    document.getElementById('btn').innerText = isCN ? "Switch to English" : "切换至中文";
 }
 </script>
 
