@@ -1,164 +1,269 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>刘航闻 | Hangwen Liu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刘航闻 (Hangwen Liu) - 个人简历</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@400;600;700&display=swap');
+        
+        :root {
+            --primary-blue: #003366;
+            --accent-blue: #1e40af;
+        }
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background:#f5f5f5;
-    margin:0;
-}
+        body { 
+            font-family: 'Inter', 'Noto Serif SC', serif; 
+            background-color: #e5e7eb;
+            color: #1f2937;
+        }
 
-.container{
-    max-width:900px;
-    margin:30px auto;
-    background:white;
-    padding:40px;
-    box-shadow:0 0 15px rgba(0,0,0,0.1);
-}
+        /* 模拟 A4 简历纸张 */
+        .resume-page {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            min-height: 1100px;
+            position: relative;
+            padding: 40px;
+        }
 
-h1{
-    margin-bottom:5px;
-}
+        .section-title {
+            border-bottom: 1.5px solid var(--primary-blue);
+            color: var(--primary-blue);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+        }
 
-.section{
-    margin-top:25px;
-}
+        .section-title i { margin-right: 10px; font-size: 1rem; }
 
-.title{
-    border-bottom:2px solid #003366;
-    font-weight:bold;
-    padding-bottom:5px;
-    margin-bottom:10px;
-    color:#003366;
-}
+        .lang-en { display: none; }
+        
+        .floating-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            background: var(--primary-blue);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+        }
 
-.lang-en{display:none;}
+        .floating-btn:hover { transform: scale(1.05); background: var(--accent-blue); }
 
-.btn{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    background:#003366;
-    color:white;
-    padding:10px 20px;
-    border-radius:20px;
-    cursor:pointer;
-}
-</style>
+        .score-badge {
+            background: #f1f5f9;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: var(--accent-blue);
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            font-size: 0.85rem;
+        }
+
+        @media print {
+            .floating-btn { display: none; }
+            body { background: white; }
+            .resume-page { box-shadow: none; margin: 0; width: 100%; max-width: 100%; }
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="btn" onclick="toggleLang()">中 / EN</div>
+    <div class="floating-btn" onclick="toggleLang()">
+        <i class="fas fa-language mr-2"></i>
+        <span id="btn-txt">Switch to English</span>
+    </div>
 
-<div class="container">
+    <div class="resume-page">
+        <header class="border-b-4 border-gray-800 pb-6 mb-6">
+            <div class="flex justify-between items-end">
+                <div>
+                    <h1 class="text-4xl font-bold tracking-tight text-gray-900">
+                        <span class="lang-zh">刘航闻</span>
+                        <span class="lang-en text-3xl">Hangwen Liu</span>
+                    </h1>
+                    <p class="mt-2 text-lg font-medium text-blue-800">
+                        <span class="lang-zh">中共党员 | 21 岁 | 男 | [span_0](start_span)满族</span>[span_0](end_span)
+                        <span class="lang-en text-base">CPC Member | 21 Years Old | Male | Manchu</span>
+                    </p>
+                </div>
+                <div class="text-right text-sm">
+                    [span_1](start_span)<p><i class="fas fa-envelope mr-2 text-gray-400"></i>1171930010@qq.com[span_1](end_span)</p>
+                    [span_2](start_span)<p><i class="fas fa-phone mr-2 text-gray-400"></i>(+86) 188-0407-0265[span_2](end_span)</p>
+                </div>
+            </div>
+        </header>
 
-<h1>
-<span class="lang-zh">刘航闻</span>
-<span class="lang-en">Hangwen Liu</span>
-</h1>
+        <section>
+            <div class="section-title">
+                <i class="fas fa-graduation-cap"></i>
+                <span class="lang-zh">教育背景</span>
+                <span class="lang-en">EDUCATION BACKGROUND</span>
+            </div>
+            <div class="flex justify-between font-bold text-gray-800">
+                <span>
+                    [span_3](start_span)<span class="lang-zh">辽宁大学 (211、双一流建设高校) 经济学院</span>[span_3](end_span)
+                    <span class="lang-en text-sm">School of Economics, Liaoning University (211 Project)</span>
+                </span>
+                [span_4](start_span)<span class="text-gray-500 text-sm">2022.09 - 至今[span_4](end_span)</span>
+            </div>
+            <p class="text-blue-700 italic font-medium my-1">
+                [span_5](start_span)<span class="lang-zh">经济学（国家基础学科拔尖学生培养计划2.0基地）</span>[span_5](end_span)
+                <span class="lang-en text-sm">Economics (National Top-notch Undergraduate Foundation Program 2.0)</span>
+            </p>
+            <div class="grid grid-cols-2 gap-4 mt-2 mb-3 bg-gray-50 p-3 rounded border border-gray-100">
+                <div class="text-sm">
+                    [span_6](start_span)<span class="lang-zh">平均学分绩点：<span class="score-badge">3.88/4.00</span></span>[span_6](end_span)
+                    <span class="lang-en">GPA: <span class="score-badge">3.88/4.00</span></span>
+                </div>
+                <div class="text-sm">
+                    [span_7](start_span)<span class="lang-zh">专业成绩排名：<span class="score-badge">2/74</span></span>[span_7](end_span)
+                    <span class="lang-en">Academic Ranking: <span class="score-badge">2/74</span></span>
+                </div>
+            </div>
+            <div class="course-grid">
+                [span_8](start_span)<div class="lang-zh">宏观经济学 <span class="score-badge">99</span></div>[span_8](end_span)
+                [span_9](start_span)<div class="lang-zh">计量经济学 <span class="score-badge">94</span></div>[span_9](end_span)
+                [span_10](start_span)<div class="lang-zh">金融学 <span class="score-badge">97</span></div>[span_10](end_span)
+                [span_11](start_span)<div class="lang-zh">外国经济思想史 <span class="score-badge">98</span></div>[span_11](end_span)
+                [span_12](start_span)<div class="lang-zh">概率论与数理统计 <span class="score-badge">99</span></div>[span_12](end_span)
+                <div class="lang-en">Macroeconomics <span class="score-badge">99</span></div>
+                <div class="lang-en">Econometrics <span class="score-badge">94</span></div>
+                <div class="lang-en">Finance <span class="score-badge">97</span></div>
+                <div class="lang-en">Foreign Econ Thought <span class="score-badge">98</span></div>
+                <div class="lang-en">Prob & Statistics <span class="score-badge">99</span></div>
+            </div>
+            <div class="mt-3 text-sm text-gray-600 border-t pt-2">
+                <span class="lang-zh"><strong>英语水平：</strong>CET-4: 539 | CET-6: 453 | [span_13](start_span)雅思: 6.0</span>[span_13](end_span)
+                <span class="lang-en"><strong>English Proficiency:</strong> CET-4: 539 | CET-6: 453 | IELTS: 6.0</span>
+            </div>
+        </section>
 
-<p>
-<span class="lang-zh">中共党员｜男｜21岁｜满族</span>
-<span class="lang-en">CPC Member | Male | 21 | Manchu</span>
-</p>
+        <section>
+            <div class="section-title">
+                <i class="fas fa-award"></i>
+                <span class="lang-zh">荣誉奖励</span>
+                <span class="lang-en">HONORS & AWARDS</span>
+            </div>
+            <ul class="list-disc ml-5 text-sm space-y-1">
+                [span_14](start_span)<li><span class="lang-zh"><strong>2023-2024:</strong> 国家奖学金、白钦先奖学金、四次校级一等奖学金、一次二等奖学金</span>[span_14](end_span)</li>
+                [span_15](start_span)<li><span class="lang-zh">辽宁大学优秀学生、优秀团员；第十届CFCC智慧经济创新创业竞赛<strong>国家特等奖</strong></span>[span_15](end_span)</li>
+                [span_16](start_span)<li><span class="lang-zh">第十四届“挑战杯”大学生创业计划竞赛<strong>省级金奖</strong>；第十四届三创赛省级一等奖；全国大学生统计建模大赛省级银奖</span>[span_16](end_span)</li>
+                <li class="lang-en">National Scholarship, Bai Qinxian Scholarship, 4x University First-Class Scholarships</li>
+                <li class="lang-en">National Grand Prize in the 10th CFCC Smart Economy Innovation & Entrepreneurship Competition</li>
+                <li class="lang-en">Provincial Gold Medal in the 14th "Challenge Cup" College Students Entrepreneurship Plan Competition</li>
+            </ul>
+        </section>
 
-<p>📧 1171930010@qq.com ｜ 📱 18804070265</p>
+        <section>
+            <div class="section-header">
+                <div class="section-title">
+                    <i class="fas fa-microscope"></i>
+                    <span class="lang-zh">科研成果</span>
+                    <span class="lang-en">RESEARCH ACHIEVEMENTS</span>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="flex justify-between font-bold text-sm">
+                    [span_17](start_span)<span><span class="lang-zh">期刊论文《ESG 评级与企业绿色技术创新》</span>[span_17](end_span)</span>
+                    [span_18](start_span)<span class="text-gray-500">2024.02-2024.09[span_18](end_span)</span>
+                </div>
+                [span_19](start_span)<p class="text-xs text-blue-600 italic">发表于：北大核心/CSSCI扩展版期刊《工业技术经济》, 2024, 43(12) : 52-61.[span_19](end_span)</p>
+                <p class="text-sm text-gray-700 mt-1 leading-relaxed">
+                    [span_20](start_span)<span class="lang-zh">运用多期DID模型实证发现：ESG评级通过缓解融资约束、增加研发投入、减少管理者短视三条机制显著提升企业绿色创新。本文被引6次，下载量3500+。</span>[span_20](end_span)
+                    <span class="lang-en">Utilized multi-period DID model to find that ESG ratings significantly enhance green innovation. Cited 6 times, 3500+ downloads.</span>
+                </p>
+            </div>
+            <div class="mb-4">
+                <div class="flex justify-between font-bold text-sm">
+                    <span><span class="lang-zh">工作论文《ESG 评级的稳股市效应——基于耐心资本和财务柔性》</span></span>
+                    <span class="text-gray-500">2025.01-2025.04</span>
+                </div>
+                <p class="text-sm text-gray-700 mt-1 leading-relaxed italic">
+                    <span class="lang-zh">入选“第三十三届中华外国经济学说研究会”，并进入CSSCI期刊外审阶段。</span>
+                    <span class="lang-en">Selected for the 33rd National Conference of Foreign Economic Thought; under CSSCI external review.</span>
+                </p>
+            </div>
+            <div class="mb-4">
+                <div class="flex justify-between font-bold text-sm">
+                    <span><span class="lang-zh">工作论文《谁为气候风险买单？——基于劳动收入份额视角》</span></span>
+                    <span class="text-gray-500">2025.05-2025.08</span>
+                </div>
+                <p class="text-sm text-gray-700 mt-1 leading-relaxed italic">
+                    <span class="lang-zh">入选“企业高质量发展与中国式现代化论坛”，并进入CSSCI期刊外审阶段。</span>
+                    <span class="lang-en">Selected for "Enterprise High-Quality Development Forum"; under CSSCI external review.</span>
+                </p>
+            </div>
+        </section>
 
-<!-- 教育 -->
-<div class="section">
-<div class="title">教育背景 / EDUCATION</div>
+        <section>
+            <div class="section-title">
+                <i class="fas fa-rocket"></i>
+                <span class="lang-zh">竞赛经历</span>
+                <span class="lang-en">COMPETITION EXPERIENCE</span>
+            </div>
+            <div class="mb-2">
+                <div class="flex justify-between font-bold text-sm">
+                    [span_21](start_span)<span><span class="lang-zh">创新创业项目：“溪草茶饮”——药食同源赋能本溪中草药产业振兴</span>[span_21](end_span)</span>
+                    [span_22](start_span)<span class="text-gray-500">2024.02-2025.03[span_22](end_span)</span>
+                </div>
+                <p class="text-sm text-gray-700 mt-1">
+                    [span_23](start_span)<span class="lang-zh">通过品牌化、产业化推动本溪桓仁满族自治县中草药产业转型。该项目荣获第十四届“挑战杯”省级一等奖、CFCC国家特等奖。</span>[span_23](end_span)
+                    <span class="lang-en">Promoted herbal medicine industry revitalization. Won Challenge Cup Provincial 1st Prize and CFCC National Grand Prize.</span>
+                </p>
+            </div>
+        </section>
 
-<p><b>辽宁大学 经济学院（211 / 双一流）</b></p>
-<p>2022.09 - 至今</p>
+        <section>
+            <div class="section-title">
+                <i class="fas fa-users"></i>
+                <span class="lang-zh">校园经历与课外活动</span>
+                <span class="lang-en">CAMPUS & EXTRACURRICULAR</span>
+            </div>
+            <div class="text-sm space-y-2">
+                [span_24](start_span)<p><strong><span class="lang-zh">辽宁大学经济学院学生会执行主席 (2024.12 至今)</span>[span_24](end_span)</strong></p>
+                [span_25](start_span)<p><span class="lang-zh">联合国教科文组织地球宪章首届“青年领导力”国际培训项目 (10周培训)[span_25](end_span)</span></p>
+                [span_26](start_span)<p><span class="lang-zh">社会实践：围绕本溪桓仁县中草药产业撰写调研报告，推进产学研融合[span_26](end_span)</span></p>
+                <p class="lang-en">Executive President, Student Union of School of Economics (2024.12-Present)</p>
+                <p class="lang-en">UNESCO Earth Charter 1st "Youth Leadership" International Training (10 weeks)</p>
+            </div>
+        </section>
+    </div>
 
-<p>
-<span class="lang-zh">经济学（国家基础学科拔尖学生培养计划2.0）</span>
-<span class="lang-en">Economics (Top-notch Talent Program 2.0)</span>
-</p>
-
-<p>GPA：3.88 / 4.00 ｜ 排名：2 / 74</p>
-
-<p>
-宏观经济学(99)｜计量经济学(94)｜金融学(97)｜概率论(99)
-</p>
-
-<p>英语：CET-4 539 ｜ CET-6 453 ｜ IELTS 6.0</p>
-</div>
-
-<!-- 荣誉 -->
-<div class="section">
-<div class="title">荣誉奖励 / AWARDS</div>
-
-<ul>
-<li>国家奖学金、白钦先奖学金</li>
-<li>四次校级一等奖学金、一次二等奖学金</li>
-<li>辽宁大学优秀学生、优秀团员</li>
-<li>CFCC智慧经济创新创业竞赛国家特等奖</li>
-<li>挑战杯省级金奖</li>
-<li>三创赛省级一等奖</li>
-<li>统计建模大赛省级银奖</li>
-</ul>
-</div>
-
-<!-- 科研 -->
-<div class="section">
-<div class="title">科研成果 / RESEARCH</div>
-
-<p><b>《ESG评级与企业绿色技术创新》</b></p>
-<p>发表于《工业技术经济》（CSSCI扩展），被引6次，下载3500+</p>
-<p>使用多期DID模型，发现ESG显著促进企业绿色创新</p>
-
-<br>
-
-<p><b>《ESG评级的稳股市效应》</b></p>
-<p>入选全国会议，CSSCI外审中</p>
-
-<br>
-
-<p><b>《谁为气候风险买单》</b></p>
-<p>入选论坛，CSSCI外审中</p>
-</div>
-
-<!-- 竞赛 -->
-<div class="section">
-<div class="title">竞赛经历 / COMPETITION</div>
-
-<p><b>“溪草茶饮”创新项目</b></p>
-<p>推动本溪中草药产业发展，获挑战杯、省一等奖、CFCC国家特等奖</p>
-</div>
-
-<!-- 校园 -->
-<div class="section">
-<div class="title">校园经历 / EXPERIENCE</div>
-
-<ul>
-<li>经济学院学生会执行主席（2024-至今）</li>
-<li>联合国教科文组织青年领导力项目</li>
-<li>本溪中草药产业调研负责人</li>
-</ul>
-</div>
-
-</div>
-
-<script>
-function toggleLang(){
-    let zh=document.querySelectorAll(".lang-zh");
-    let en=document.querySelectorAll(".lang-en");
-
-    zh.forEach(el=>{
-        el.style.display = (el.style.display==="none")?"inline":"none";
-    });
-
-    en.forEach(el=>{
-        el.style.display = (el.style.display==="inline")?"none":"inline";
-    });
-}
-</script>
-
+    <script>
+        function toggleLang() {
+            const zhElements = document.querySelectorAll('.lang-zh');
+            const enElements = document.querySelectorAll('.lang-en');
+            const btn = document.getElementById('btn-txt');
+            
+            if (zhElements[0].style.display === 'none') {
+                zhElements.forEach(el => el.style.display = 'inline-block');
+                enElements.forEach(el => el.style.display = 'none');
+                btn.innerText = "Switch to English";
+            } else {
+                zhElements.forEach(el => el.style.display = 'none');
+                enElements.forEach(el => el.style.display = 'inline-block');
+                btn.innerText = "切换至中文";
+            }
+        }
+    </script>
 </body>
 </html>
