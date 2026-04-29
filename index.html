@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>刘航闻 | 个人主页</title>
+<title>刘航闻 | Personal Website</title>
 
 <style>
 body {
@@ -11,157 +11,187 @@ body {
   font-family: -apple-system, BlinkMacSystemFont;
   background: #0f172a;
   color: #e2e8f0;
+  line-height: 1.7;
 }
 
-/* 顶部 */
-.header {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 40px;
-  background: linear-gradient(120deg,#1e293b,#0f172a);
-}
-
-.header h1 {
-  font-size: 42px;
-  margin: 0;
-}
-
-.header p {
-  color: #94a3b8;
-}
-
-/* 通用区块 */
-.section {
+.container {
   max-width: 900px;
   margin: auto;
-  padding: 60px 20px;
+  padding: 30px;
 }
 
-/* 卡片 */
+.header {
+  padding: 60px 20px;
+  background: linear-gradient(135deg,#1e293b,#020617);
+}
+
+h1 { margin: 0; }
+
+.section { margin-top: 50px; }
+
 .card {
   background: #1e293b;
   padding: 20px;
   border-radius: 12px;
-  margin-top: 20px;
-  transition: 0.3s;
+  margin-top: 15px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.lang-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 
-/* 标签 */
-.tag {
-  display: inline-block;
-  background: #334155;
-  padding: 5px 10px;
+button {
+  margin-left: 5px;
+  padding: 6px 12px;
+  border: none;
   border-radius: 6px;
-  margin: 5px;
-  font-size: 12px;
-}
-
-/* 可展开 */
-.details {
+  background: #334155;
+  color: white;
   cursor: pointer;
-  margin-top: 10px;
-  color: #60a5fa;
 }
 
-/* 动画 */
-.fade {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 0.8s;
-}
-
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+.hidden { display: none; }
 </style>
 </head>
 
 <body>
 
-<!-- 顶部 -->
+<div class="lang-switch">
+<button onclick="showCN()">中文</button>
+<button onclick="showEN()">EN</button>
+</div>
+
+<!-- 中文页面 -->
+<div id="cn">
+
 <div class="header">
-  <h1>刘航闻</h1>
-  <p>辽宁大学经济学（拔尖计划） | 数据分析 | 科研导向</p>
-  <p>📧 1171930010@qq.com</p>
+<div class="container">
+<h1>刘航闻</h1>
+<p>21岁 | 男 | 满族 | 中共党员</p>
+<p>📧 1171930010@qq.com | 📞 18804070265</p>
+<p>辽宁大学经济学（拔尖计划）</p>
+</div>
 </div>
 
-<!-- 教育 -->
-<div class="section fade">
-  <h2>教育背景</h2>
-  <div class="card">
-    辽宁大学（211）<br>
-    GPA：3.88/4.0（专业第2）<br>
-    核心课程：计量经济学 / 金融学 / Python
-  </div>
+<div class="container">
+
+<div class="section">
+<h2>教育背景</h2>
+<div class="card">
+辽宁大学（211 / 双一流）<br>
+经济学（拔尖计划）<br>
+GPA：3.88/4.0（专业第2）<br>
+核心课程：宏观经济学、计量经济学、金融学、概率统计
+</div>
 </div>
 
-<!-- 科研 -->
-<div class="section fade">
-  <h2>科研成果</h2>
-
-  <div class="card">
-    <b>ESG评级与企业绿色技术创新</b>
-    <div class="details" onclick="toggle(this)">展开详情</div>
-    <div style="display:none">
-      使用计量模型分析ESG评级对绿色创新的影响，
-      论文发表于核心期刊，被引10+。
-    </div>
-  </div>
-
-  <div class="card">
-    ESG评级稳股市效应（会议入选）
-  </div>
-
+<div class="section">
+<h2>科研成果</h2>
+<div class="card">
+<b>ESG评级与企业绿色技术创新</b><br>
+基于2012-2022年A股数据，使用DID模型，研究ESG评级对绿色创新的促进作用，
+通过融资约束、研发投入等机制实现。
 </div>
 
-<!-- 项目 -->
-<div class="section fade">
-  <h2>竞赛项目</h2>
-
-  <div class="card">
-    <b>溪草茶饮项目</b>
-    <div class="details" onclick="toggle(this)">展开详情</div>
-    <div style="display:none">
-      推动中草药产业商业化，
-      获国家特等奖与多项省一等奖。
-    </div>
-  </div>
-
+<div class="card">
+<b>ESG评级稳股市效应</b><br>
+从耐心资本与财务柔性角度分析ESG对股价稳定性的影响。
 </div>
 
-<!-- 技能 -->
-<div class="section fade">
-  <h2>技能</h2>
-  <span class="tag">Python</span>
-  <span class="tag">Stata</span>
-  <span class="tag">数据分析</span>
-  <span class="tag">计量经济学</span>
+<div class="card">
+<b>气候风险与劳动收入份额</b><br>
+研究气候风险对收入分配的影响机制。
+</div>
+</div>
+
+<div class="section">
+<h2>竞赛与项目</h2>
+<div class="card">
+溪草茶饮项目（国家特等奖）<br>
+推动中草药产业商业化与乡村振兴
+</div>
+</div>
+
+<div class="section">
+<h2>技能</h2>
+<div class="card">
+Stata / Python / 数据分析 / 计量经济学
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- 英文页面 -->
+<div id="en" class="hidden">
+
+<div class="header">
+<div class="container">
+<h1>Hangwen Liu</h1>
+<p>Economics (Elite Program) | Data Analysis | ESG Research</p>
+<p>Email: 1171930010@qq.com</p>
+</div>
+</div>
+
+<div class="container">
+
+<div class="section">
+<h2>Education</h2>
+<div class="card">
+Liaoning University (Double First-Class)<br>
+Economics (Elite Program)<br>
+GPA: 3.88/4.0 (Rank 2/74)
+</div>
+</div>
+
+<div class="section">
+<h2>Research</h2>
+<div class="card">
+<b>ESG Ratings and Green Innovation</b><br>
+Using DID model on Chinese A-share firms (2012-2022),
+find ESG significantly promotes green innovation.
+</div>
+
+<div class="card">
+<b>ESG and Stock Market Stability</b><br>
+Analyze how ESG stabilizes stock prices via patient capital and financial flexibility.
+</div>
+
+<div class="card">
+<b>Climate Risk and Labor Income Share</b><br>
+Study distributional effects of climate risk.
+</div>
+</div>
+
+<div class="section">
+<h2>Projects</h2>
+<div class="card">
+Herbal Tea Venture Project (National Award)<br>
+Promoting industrial upgrading and rural revitalization
+</div>
+</div>
+
+<div class="section">
+<h2>Skills</h2>
+<div class="card">
+Stata / Python / Econometrics / Data Analysis
+</div>
+</div>
+
+</div>
 </div>
 
 <script>
-function toggle(el){
-  let content = el.nextElementSibling;
-  content.style.display =
-    content.style.display === "none" ? "block" : "none";
+function showCN(){
+  document.getElementById("cn").style.display="block";
+  document.getElementById("en").style.display="none";
 }
-
-// 滚动动画
-let fades = document.querySelectorAll('.fade');
-window.addEventListener('scroll', ()=>{
-  fades.forEach(el=>{
-    let rect = el.getBoundingClientRect();
-    if(rect.top < window.innerHeight - 50){
-      el.classList.add('show');
-    }
-  })
-});
+function showEN(){
+  document.getElementById("cn").style.display="none";
+  document.getElementById("en").style.display="block";
+}
 </script>
 
 </body>
