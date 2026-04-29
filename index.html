@@ -3,141 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>刘航闻 | 个人简历</title>
+<title>刘航闻 | 个人主页</title>
 
 <style>
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue";
-  background: #f4f6f9;
-  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont;
+  background: #0f172a;
+  color: #e2e8f0;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
-
+/* 顶部 */
 .header {
-  text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(135deg, #4a90e2, #6fb1fc);
-  color: white;
-  border-radius: 12px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  background: linear-gradient(120deg,#1e293b,#0f172a);
 }
 
 .header h1 {
+  font-size: 42px;
   margin: 0;
-  font-size: 32px;
 }
 
+.header p {
+  color: #94a3b8;
+}
+
+/* 通用区块 */
 .section {
-  background: white;
-  margin-top: 20px;
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* 卡片 */
+.card {
+  background: #1e293b;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  margin-top: 20px;
+  transition: 0.3s;
 }
 
-.section h2 {
-  border-left: 4px solid #4a90e2;
-  padding-left: 10px;
+.card:hover {
+  transform: translateY(-5px);
 }
 
+/* 标签 */
 .tag {
   display: inline-block;
-  background: #eef3ff;
-  color: #4a90e2;
+  background: #334155;
   padding: 5px 10px;
   border-radius: 6px;
-  margin: 5px 5px 0 0;
+  margin: 5px;
   font-size: 12px;
 }
 
-ul {
-  padding-left: 20px;
+/* 可展开 */
+.details {
+  cursor: pointer;
+  margin-top: 10px;
+  color: #60a5fa;
 }
 
-.highlight {
-  color: #4a90e2;
-  font-weight: bold;
+/* 动画 */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
+<!-- 顶部 -->
 <div class="header">
   <h1>刘航闻</h1>
-  <p>📍 辽宁沈阳 | 📧 1171930010@qq.com | 📞 18804070265</p>
-  <p>辽宁大学经济学（拔尖计划） | 中共党员</p>
+  <p>辽宁大学经济学（拔尖计划） | 数据分析 | 科研导向</p>
+  <p>📧 1171930010@qq.com</p>
 </div>
 
-<div class="section">
+<!-- 教育 -->
+<div class="section fade">
   <h2>教育背景</h2>
-  <p><b>辽宁大学（211）</b> 经济学（拔尖计划）</p>
-  <p>GPA：<span class="highlight">3.88/4.0</span>（专业第2/74）</p>
-  <p>核心课程：宏观经济学(99) / 计量经济学(94) / 金融学(97) / Python(92)</p>
+  <div class="card">
+    辽宁大学（211）<br>
+    GPA：3.88/4.0（专业第2）<br>
+    核心课程：计量经济学 / 金融学 / Python
+  </div>
 </div>
 
-<div class="section">
-  <h2>荣誉奖项</h2>
-  <ul>
-    <li>国家奖学金（2023-2024）</li>
-    <li>智慧经济创新创业竞赛 国家特等奖</li>
-    <li>挑战杯 省一等奖</li>
-    <li>电子商务创新赛 省一等奖</li>
-    <li>统计建模大赛 省二等奖</li>
-    <li>4次校一等奖学金</li>
-  </ul>
-</div>
-
-<div class="section">
+<!-- 科研 -->
+<div class="section fade">
   <h2>科研成果</h2>
-  <ul>
-    <li><b>ESG评级与企业绿色技术创新</b>（北大核心期刊）</li>
-    <li>ESG评级稳股市效应（全国会议入选）</li>
-    <li>气候风险与收入分配研究（论坛入选）</li>
-    <li>省级课题：耐心资本与产业体系（已立项）</li>
-  </ul>
+
+  <div class="card">
+    <b>ESG评级与企业绿色技术创新</b>
+    <div class="details" onclick="toggle(this)">展开详情</div>
+    <div style="display:none">
+      使用计量模型分析ESG评级对绿色创新的影响，
+      论文发表于核心期刊，被引10+。
+    </div>
+  </div>
+
+  <div class="card">
+    ESG评级稳股市效应（会议入选）
+  </div>
+
 </div>
 
-<div class="section">
+<!-- 项目 -->
+<div class="section fade">
   <h2>竞赛项目</h2>
-  <p><b>“溪草茶饮”项目</b></p>
-  <ul>
-    <li>推动中草药产业商业化</li>
-    <li>国家特等奖 + 多项省级一等奖</li>
-  </ul>
+
+  <div class="card">
+    <b>溪草茶饮项目</b>
+    <div class="details" onclick="toggle(this)">展开详情</div>
+    <div style="display:none">
+      推动中草药产业商业化，
+      获国家特等奖与多项省一等奖。
+    </div>
+  </div>
+
 </div>
 
-<div class="section">
-  <h2>校园经历</h2>
-  <ul>
-    <li>经济学院学生会执行主席（组织800人活动）</li>
-    <li>青马工程学员（企业调研+政策研究）</li>
-    <li>社会实践调研（产学研项目）</li>
-  </ul>
-</div>
-
-<div class="section">
+<!-- 技能 -->
+<div class="section fade">
   <h2>技能</h2>
-  <div class="tag">Stata</div>
-  <div class="tag">Python</div>
-  <div class="tag">Excel</div>
-  <div class="tag">数据分析</div>
-  <div class="tag">计量经济学</div>
+  <span class="tag">Python</span>
+  <span class="tag">Stata</span>
+  <span class="tag">数据分析</span>
+  <span class="tag">计量经济学</span>
 </div>
 
-<div class="section">
-  <h2>语言能力</h2>
-  <p>CET-4：539 | CET-6：453 | 雅思：6.0</p>
-</div>
+<script>
+function toggle(el){
+  let content = el.nextElementSibling;
+  content.style.display =
+    content.style.display === "none" ? "block" : "none";
+}
 
-</div>
+// 滚动动画
+let fades = document.querySelectorAll('.fade');
+window.addEventListener('scroll', ()=>{
+  fades.forEach(el=>{
+    let rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 50){
+      el.classList.add('show');
+    }
+  })
+});
+</script>
 
 </body>
 </html>
